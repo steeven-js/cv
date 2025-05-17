@@ -1,8 +1,15 @@
 import { personalInfo, contactInfo, formations, skills, experiences } from '../data/data';
+import CV1PDF from '../components/pdf/CV1PDF';
 
 const CV1 = () => {
   return (
     <div className="w-full max-w-[612px] mx-auto bg-white">
+      {/* Bouton de téléchargement PDF */}
+      <div className="flex justify-end p-4">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center">
+          <span className="mr-2"><CV1PDF /></span>
+        </button>
+      </div>
       <div className="p-6">
         {/* Personal Info Section */}
         <div className="mb-8">

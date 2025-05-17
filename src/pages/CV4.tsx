@@ -9,12 +9,18 @@ import {
   contextCV4,
   languesCV4
 } from '../data/data4';
+import CV4PDF from '../components/pdf/CV4PDF';
 
 const CV4: React.FC = () => {
   return (
-    <div className="w-full max-w-[21cm] min-h-[29.7cm] mx-auto bg-white border border-gray-200 shadow-lg p-8 font-sans">
-      {/* Header */}
-      <div className="mb-6">
+    <div className="w-full max-w-[21cm] min-h-[29.7cm] mx-auto bg-white border border-gray-200 shadow-lg font-sans">
+      {/* Actions PDF */}
+      <div className="flex justify-end p-4">
+        <CV4PDF />
+      </div>
+      <div className="p-8">
+        {/* Header */}
+        <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-900 mb-1">{personalInfoCV4.name}</h1>
         <h2 className="text-xl font-medium text-blue-700 mb-3">{personalInfoCV4.title}</h2>
         <p className="text-sm text-gray-700 leading-relaxed">{personalInfoCV4.summary}</p>
@@ -126,6 +132,7 @@ const CV4: React.FC = () => {
       <footer className="mt-8 pt-3 border-t border-gray-200 text-center text-xs text-gray-500 italic">
         Ce CV a été adapté conformément à la fiche métier M1861 - Développeur/Développeuse logiciel ou d'application.
       </footer>
+      </div>
     </div>
   );
 };

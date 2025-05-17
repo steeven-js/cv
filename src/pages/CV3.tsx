@@ -1,8 +1,15 @@
 import { personalInfo, contactInfo, formations, skills, experiences } from '../data/data';
+import CV3PDF from '../components/pdf/CV3PDF';
 
 const CV3 = () => {
   return (
     <div className="w-full max-w-[700px] mx-auto bg-gray-50 border border-gray-200">
+      {/* Bouton de téléchargement PDF */}
+      <div className="flex justify-end p-4">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center">
+          <span className="mr-2"><CV3PDF /></span>
+        </button>
+      </div>
       <div className="p-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b-2 border-gray-300 pb-6 mb-6">
