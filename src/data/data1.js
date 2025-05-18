@@ -52,7 +52,22 @@ export const skillsCV4 = [
 
 export const experiencesCV4 = [
   {
-    period: "2023 - Présent",
+    period: "2024 - Présent",
+    position: "Développeur d'application",
+    company: "Projet CRM madinia-dashboard",
+    role: "Développeur Frontend React",
+    achievements: [
+      "Développement d'applications selon les besoins spécifiques des utilisateurs",
+      "Création d'un système complet de gestion de clients et facturation",
+      "Collaboration avec des équipes multidisciplinaires pour intégrer de nouvelles fonctionnalités",
+      "Programmation de tableaux de bord interactifs avec visualisations de données",
+      "Mise en place d'une architecture frontend modulaire et réutilisable",
+      "Optimisation des processus de qualité pour assurer la fiabilité des logiciels",
+      "Respect des délais de production pour répondre aux demandes des clients"
+    ]
+  },
+  {
+    period: "2024 - Présent",
     position: "Développeur logiciel et d'application",
     company: "Projet api-madinia",
     role: "Développeur Backend Laravel",
@@ -67,22 +82,7 @@ export const experiencesCV4 = [
     ]
   },
   {
-    period: "2022 - 2023",
-    position: "Développeur d'application",
-    company: "Projet madinia-dashboard-update",
-    role: "Développeur Frontend React",
-    achievements: [
-      "Développement d'applications selon les besoins spécifiques des utilisateurs",
-      "Création d'un système complet de gestion de clients et facturation",
-      "Collaboration avec des équipes multidisciplinaires pour intégrer de nouvelles fonctionnalités",
-      "Programmation de tableaux de bord interactifs avec visualisations de données",
-      "Mise en place d'une architecture frontend modulaire et réutilisable",
-      "Optimisation des processus de qualité pour assurer la fiabilité des logiciels",
-      "Respect des délais de production pour répondre aux demandes des clients"
-    ]
-  },
-  {
-    period: "2021 - 2022",
+    period: "2024 - Présent",
     position: "Concepteur d'application informatique",
     company: "Projet madinia-landingPage",
     role: "Développeur UI/UX Frontend",

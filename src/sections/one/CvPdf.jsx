@@ -8,6 +8,8 @@ import {
   PDFDownloadLink,
 } from '@react-pdf/renderer';
 
+import { PdfIconify } from './PdfIconify';
+
 import {
   skillsCV4,
   contextCV4,
@@ -66,7 +68,10 @@ const styles = StyleSheet.create({
   sidebar: {
     width: '40%',
     backgroundColor: '#F9FAFB',
-    padding: 8,
+    paddingTop: 0,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingBottom: 8,
     borderRadius: 3,
   },
   sectionTitle: {
@@ -193,8 +198,28 @@ const CV4Document = () => (
     <Page size="A4" style={styles.page}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.title}>{personalInfoCV4.name}</Text>
-        <Text style={styles.subtitle}>{personalInfoCV4.title}</Text>
+        {/* Nom, titre et contact sur la même ligne */}
+        <View style={[styles.twoColumnGrid, { marginBottom: 10 }]}>
+          <View style={styles.halfColumn}>
+            <Text style={styles.title}>{personalInfoCV4.name}</Text>
+            <Text style={styles.subtitle}>{personalInfoCV4.title}</Text>
+          </View>
+          <View style={styles.halfColumn}>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginBottom: 3 }}>
+              <PdfIconify name="email" width={12} height={12} style={{ marginRight: 5 }} />
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[0].value}</Text>
+            </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginBottom: 3 }}>
+              <PdfIconify name="phone" width={12} height={12} style={{ marginRight: 5 }} />
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[1].value}</Text>
+            </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center' }}>
+              <PdfIconify name="linkedin" width={12} height={12} style={{ marginRight: 5 }} />
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[2].value}</Text>
+            </View>
+          </View>
+        </View>
+
         <Text style={styles.summary}>{personalInfoCV4.summary}</Text>
       </View>
 
@@ -243,7 +268,7 @@ const CV4Document = () => (
             </View>
           </View>
 
-          {/* Langues et Contact */}
+          {/* Langues */}
           <View style={styles.twoColumnGrid}>
             <View style={styles.halfColumn}>
               <Text style={styles.sectionTitle}>Langues</Text>
@@ -255,14 +280,14 @@ const CV4Document = () => (
               ))}
             </View>
 
-            <View style={styles.halfColumn}>
+            {/* <View style={styles.halfColumn}>
               <Text style={styles.sectionTitle}>Contact</Text>
               {contactInfoCV4.map((contact, index) => (
                 <Text key={index} style={styles.contactItem}>
                   {contact.value}
                 </Text>
               ))}
-            </View>
+            </View> */}
           </View>
         </View>
 
