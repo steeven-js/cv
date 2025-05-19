@@ -9,7 +9,6 @@ import {
 } from '@react-pdf/renderer';
 
 import { PdfIconify } from './PdfIconify';
-
 import {
   skillsCV4,
   contextCV4,
@@ -180,16 +179,6 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     paddingLeft: 7,
   },
-  footer: {
-    marginTop: 10,
-    paddingTop: 3,
-    borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
-    textAlign: 'center',
-    fontSize: 6,
-    fontStyle: 'italic',
-    color: '#6B7280',
-  },
 });
 
 // Create the PDF Document component
@@ -205,17 +194,39 @@ const CV4Document = () => (
             <Text style={styles.subtitle}>{personalInfoCV4.title}</Text>
           </View>
           <View style={styles.halfColumn}>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginBottom: 3 }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+                marginBottom: 3,
+              }}
+            >
               <PdfIconify name="email" width={12} height={12} style={{ marginRight: 5 }} />
-              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[0].value}</Text>
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>
+                {contactInfoCV4[0].value}
+              </Text>
             </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginBottom: 3 }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+                marginBottom: 3,
+              }}
+            >
               <PdfIconify name="phone" width={12} height={12} style={{ marginRight: 5 }} />
-              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[1].value}</Text>
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>
+                {contactInfoCV4[1].value}
+              </Text>
             </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center' }}>
+            <View
+              style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center' }}
+            >
               <PdfIconify name="linkedin" width={12} height={12} style={{ marginRight: 5 }} />
-              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>{contactInfoCV4[2].value}</Text>
+              <Text style={[styles.contactItem, { fontWeight: 'bold', textAlign: 'right' }]}>
+                {contactInfoCV4[2].value}
+              </Text>
             </View>
           </View>
         </View>
@@ -328,13 +339,6 @@ const CV4Document = () => (
             ))}
           </View>
         </View>
-      </View>
-
-      <View style={styles.footer}>
-        <Text>
-          Ce CV a été adapté conformément à la fiche métier M1861 - Développeur/Développeuse
-          logiciel ou d&apos;application.
-        </Text>
       </View>
     </Page>
   </Document>
